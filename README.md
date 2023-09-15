@@ -1,9 +1,9 @@
 # nextcloud-k8-test
 
 ## Requirements
-Terraform
-Helm
-Docker Desktop with Kubernetes support enabled
+Terraform </br>
+Helm </br>
+Docker Desktop (K8 support enabled) </br>
 
 ## Usage
 ### Install dependencies
