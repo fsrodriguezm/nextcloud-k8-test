@@ -16,3 +16,7 @@ helm dependency update
 terraform init
 terraform apply
 ```
+## Access application
+```
+http://localhost/login
+```
