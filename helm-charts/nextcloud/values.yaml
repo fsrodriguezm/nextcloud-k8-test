@@ -378,7 +378,7 @@ service:
 ##
 persistence:
   # Nextcloud Data (/var/www/html)
-  enabled: false
+  enabled: true
   annotations: {}
   ## nextcloud data Persistent Volume Storage Class
   ## If defined, storageClassName: <storageClass>
@@ -388,6 +388,7 @@ persistence:
   ##   GKE, AWS & OpenStack)
   ##
   # storageClass: "-"
+  storageClassName: local
 
   ## A manually managed Persistent Volume and Claim
   ## Requires persistence.enabled: true
@@ -400,7 +401,7 @@ persistence:
   ## Use an additional pvc for the data directory rather than a subpath of the default PVC
   ## Useful to store data on a different storageClass (e.g. on slower disks)
   nextcloudData:
-    enabled: false
+    enabled: true
     subPath:
     annotations: {}
     # storageClass: "-"

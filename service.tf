@@ -1,4 +1,4 @@
-resource "kubernetes_service" "my_service" {
+resource "kubernetes_service" "nextcloud" {
   metadata {
     name = "nextcloud-app"
     labels = {
@@ -10,11 +10,10 @@ resource "kubernetes_service" "my_service" {
       "app.kubernetes.io/component" = "app"
     }
     port {
-      port        = 80
+      port        = 8080
       protocol    = "TCP"
       target_port = 80
     }
     type = "LoadBalancer"
   }
-
 }
