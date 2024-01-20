@@ -8,8 +8,8 @@ provider "helm" {
 # repository = "https://nextcloud.github.io/helm"
 resource "helm_release" "nextcloud" {
   name       = "nextcloud"
-  chart      = "./helm-charts/nextcloud"
+  chart      = "./helm-charts/nextcloud-3.5"
   values = [
-    "${file("./helm-charts/nextcloud/values.yaml")}"
+    "${file("./helm-charts/nextcloud-3.5/values.yaml")}"
   ]
 }
